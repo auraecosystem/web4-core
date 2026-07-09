@@ -12,7 +12,7 @@ The Web4 standard defines a trust-native distributed intelligence architecture t
 
 Web4 is an **ontology** — a formal structure of typed relationships through which trust, identity, and value are expressed.
 
-```
+```pyo3
 Web4 = MCP + RDF + LCT + T3/V3*MRH + ATP/ADP
 ```
 
@@ -38,12 +38,12 @@ Where: `/` = "verified by", `*` = "contextualized by", `+` = "augmented with"
 
 ## Quick Navigation
 
-### 📋 Essential Documents
+>> ### 📋 Essential Documents
 - [**EXECUTIVE_SUMMARY.md**](EXECUTIVE_SUMMARY.md) - Complete overview of Web4 vision and architecture
 - [**QUICK_REFERENCE.md**](QUICK_REFERENCE.md) - Essential concepts and quick start guide
 - [**GLOSSARY.md**](GLOSSARY.md) - Complete terminology reference
 
-### 📚 Integration Summaries
+>>### 📚 Integration Summaries
 - [**INTEGRATION_STATUS.md**](INTEGRATION_STATUS.md) - Development phases and current status
 - [**NOVA_REVIEW_SUMMARY.md**](NOVA_REVIEW_SUMMARY.md) - Technical review and assessment
 - [**SOCIETY_INTEGRATION_SUMMARY.md**](SOCIETY_INTEGRATION_SUMMARY.md) - **NEW**: Foundational society concept
@@ -55,26 +55,26 @@ Where: `/` = "verified by", `*` = "contextualized by", `+` = "augmented with"
 
 ### 🔧 Core Specifications
 
-#### Society & Trust Accountability
+>>#### Society & Trust Accountability
 - [**core-spec/SOCIETY_SPECIFICATION.md**](core-spec/SOCIETY_SPECIFICATION.md) - **NEW**: Foundational society concept with laws, ledgers, and citizenship
 - [**core-spec/SOCIETY_METABOLIC_STATES.md**](core-spec/SOCIETY_METABOLIC_STATES.md) - **NEW**: Living societies with sleep, hibernation, and renewal cycles
 - [**core-spec/web4-society-authority-law.md**](core-spec/web4-society-authority-law.md) - SAL trust accountability specification
 
-#### Identity & Context
+>>#### Identity & Context
 - [**protocols/web4-lct.md**](protocols/web4-lct.md) - Linked Context Token specification
 - [**MRH_RDF_SPECIFICATION.md**](MRH_RDF_SPECIFICATION.md) - Markov Relevancy Horizon as RDF graphs
 - [**MRH_THEORETICAL_FOUNDATION.md**](MRH_THEORETICAL_FOUNDATION.md) - Theory extending Markov blankets
 
-#### Entity Relationships
+>>#### Entity Relationships
 - [**protocols/web4-entity-relationships.md**](protocols/web4-entity-relationships.md) - Binding, pairing, witnessing, broadcast
 - [**MCP_ENTITY_SPECIFICATION.md**](MCP_ENTITY_SPECIFICATION.md) - MCP servers as Web4 entities
 - [**WEB4_WITNESSING_SPECIFICATION.md**](WEB4_WITNESSING_SPECIFICATION.md) - Canonical witness formats
 
-#### Ontology
+>> #### Ontology
 - [**ontology/t3v3-ontology.ttl**](ontology/t3v3-ontology.ttl) - T3/V3 fractal trust ontology (Turtle/RDF)
 - [**ontology/t3v3.jsonld**](ontology/t3v3.jsonld) - T3/V3 JSON-LD context
 
-#### Trust & Tensors
+>>#### Trust & Tensors
 - [**core-spec/mrh-tensors.md**](core-spec/mrh-tensors.md) - MRH tensor specification
 - [**core-spec/t3-v3-tensors.md**](core-spec/t3-v3-tensors.md) - Trust and value tensors
 - [**R6_TENSOR_GUIDE.md**](R6_TENSOR_GUIDE.md) - Role, Rights, Responsibilities, Risks, Rewards, Results
@@ -85,13 +85,13 @@ Where: `/` = "verified by", `*` = "contextualized by", `+` = "augmented with"
 - [**core-spec/atp-adp-cycle.md**](core-spec/atp-adp-cycle.md) - ATP/ADP value cycle specification
 - [**core-spec/dictionary-entities.md**](core-spec/dictionary-entities.md) - Dictionary entity specification
 
-#### Protocols
+>> #### Protocols
 - [**core-spec/mcp-protocol.md**](core-spec/mcp-protocol.md) - Model Context Protocol as inter-entity communication layer
 - [**protocols/web4-handshake.md**](protocols/web4-handshake.md) - HPKE-based handshake protocol
 - [**protocols/web4-metering.md**](protocols/web4-metering.md) - ATP/ADP resource exchange
 - [**core-spec/errors.md**](core-spec/errors.md) - Error taxonomy and handling
 
-### 🛠️ Implementation
+>> ### 🛠️ Implementation
 
 #### Reference Implementations
 - [**mrh_rdf_implementation.py**](mrh_rdf_implementation.py) - MRH as RDF graphs
@@ -100,7 +100,7 @@ Where: `/` = "verified by", `*` = "contextualized by", `+` = "augmented with"
 - [**mrh_migration_tool.py**](mrh_migration_tool.py) - Migration from simple to RDF format
 - [**mrh_visualizer.py**](mrh_visualizer.py) - Interactive graph visualization
 
-#### Testing & Validation
+>> #### Testing & Validation
 - [**testing/witness-vectors/**](testing/witness-vectors/) - Witness interop test vectors
 - [**testing/validator/**](testing/validator/) - Vector validation tools
 - [**validate_vectors.py**](validate_vectors.py) - Standalone validator script
@@ -108,13 +108,13 @@ Where: `/` = "verified by", `*` = "contextualized by", `+` = "augmented with"
 
 ### 📋 Profiles & Registries
 
-#### Conformance Profiles
+>> #### Conformance Profiles
 - [**profiles/edge-device-profile.md**](profiles/edge-device-profile.md) - Edge device profile
 - [**profiles/peer-to-peer-profile.md**](profiles/peer-to-peer-profile.md) - Peer-to-peer profile
 - [**profiles/cloud-service-profile.md**](profiles/cloud-service-profile.md) - Cloud service profile
 - [**profiles/blockchain-bridge-profile.md**](profiles/blockchain-bridge-profile.md) - Blockchain integration
 
-#### Registries
+>>#### Registries
 - [**registries/README.md**](registries/README.md) - IANA registry templates
 - [**registries/cipher-suites.md**](registries/cipher-suites.md) - Cryptographic suites
 - [**registries/error-codes.md**](registries/error-codes.md) - Error code registry
@@ -218,7 +218,7 @@ Web4 integrates with emerging semantic protocols (HSML, HSTP, Active Inference) 
 - Standards body submission package
 - Expanded interoperability testing
 
-## Getting Started
+>>## Getting Started
 
 1. **Read the Concepts**: Start with [QUICK_REFERENCE.md](QUICK_REFERENCE.md)
 2. **Understand the Terms**: Review [GLOSSARY.md](GLOSSARY.md)
