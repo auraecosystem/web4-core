@@ -1,0 +1,13 @@
+{
+  "lct_id": "lct:web4:mcp:client:...",
+  "entity_type": "ai",
+  "model_info": {
+    "type": "ai_model",
+    "capabilities": ["reasoning", "generation", "analysis"],
+    "context_window": 200000,
+    "trust_profile": {
+      "t3": {"talent": 0.9, "training": 0.95, "temperament": 0.85},
+      "v3": {"veracity": 0.92, "validity": 0.88, "valuation": 0.90}
+    }
+  }
+}
