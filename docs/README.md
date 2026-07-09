@@ -75,7 +75,7 @@ Both crates and both Python packages are AGPL-3.0-or-later. Patent grant terms i
 Once installed, this is the smallest end-to-end path — create a presence, mint it to a hash-chained ledger, sign and verify, generate and verify an inclusion proof:
 
 **Python:**
-```python
+```python3
 import web4_core
 
 # Create LCT (presence primitive) and an Ed25519 keypair
@@ -94,9 +94,9 @@ proof = ledger.anchor(lct.id)
 assert ledger.verify_proof(proof)
 ```
 
-**Rust:** identical steps with `Lct::new` / `ledger.mint` / `keypair.sign` / `ledger.anchor` — see [`web4-core/README.md`](web4-core/README.md#quick-start) for the matching code.
+**Rust:** identical steps with `Lct::new` / `ledger.mint` / `keypair.sign` / `ledger.anchor` — see [`web4-core/README.md`](web4-core/README.md#quick-start.html) for the matching code.
 
-**Persistent version with on-disk keypair + hash-chained ledger:** [`web4-core/python/examples/identity_bootstrap.py`](web4-core/python/examples/identity_bootstrap.py). Run once to bootstrap an LCT for a host; re-run to verify the chain didn't tamper. ~30 seconds.
+**Persistent version with on-disk keypair + hash-chained ledger:** [`web4-core/python/examples/identity_bootstrap.py`](web4-core/python/examples/boostrap/identity_bootstrap.py). Run once to bootstrap an LCT for a host; re-run to verify the chain didn't tamper. ~30 seconds.
 
 **Cross-language verification (Python mints, Rust verifies the same ledger):** [`web4-core/examples/cross_language_verify/`](web4-core/examples/cross_language_verify/). Demonstrates that the on-disk format is the contract: any language with the spec can verify what any other language minted.
 
@@ -124,11 +124,11 @@ If you're one of these people, this is worth your time:
 
 - **AI engineering lead at a lab or platform** building agent frameworks, policy systems, or governance tooling. Web4 primitives compose under your runtime. Cross-language interop (Python and Rust verifying the same on-disk ledger) is shipped; identity, T3/V3 trust, witnessing, and audit-defensible records are published primitives, not slideware.
 
-- **CISO or AI risk lead** in a regulated industry (finance, defense, healthcare) where agentic AI deployments will need to defend their actions to auditors, regulators, or insurers. Web4 turns "we hope nothing went wrong" into "we can prove what happened, on whose authority, by what rules." Enterprise implementation: **[Hardbound](https://github.com/dp-web4/hardbound)** -- provides a plugin that bridges any orchestrator (Claude Code, LangChain, CrewAI, etc.) to a signed policy entity. Every action gets an LCT identity, T3/V3 trust evaluation, and a cryptographically signed policy decision. The open standard is here; the enterprise product makes it deployable.
+- **CISO or AI risk lead** in a regulated industry (finance, defense, healthcare) where agentic AI deployments will need to defend their actions to auditors, regulators, or insurers. Web4 turns "we hope nothing went wrong" into "we can prove what happened, on whose authority, by what rules." Enterprise implementation: **[Hardbound](https://github.com/auraecosystem/dp-web4/hardbound)** -- provides a plugin that bridges any orchestrator (Claude Code, LangChain, CrewAI, etc.) to a signed policy entity. Every action gets an LCT identity, T3/V3 trust evaluation, and a cryptographically signed policy decision. The open standard is here; the enterprise product makes it deployable.
 
 - **Developer-tooling company** building agent frameworks (LangChain, CrewAI, AG2, etc.) or governance toolkits. Web4 sits *upstream* of runtime policy enforcement — governance for what an agent IS (identity, witness graph, accountability ontology), not what it DOES (runtime gating). The two layers compose; Web4 is the standard your governance toolkit can consume so identity isn't proprietary to the runtime. **Integration path**: install the [Hardbound plugin](https://github.com/dp-web4/hardbound) -- a single `HardboundPlugin` class connects any orchestrator to a Web4 policy entity, giving it an LCT identity and governed action trail. The plugin is the bridge; Web4 is the substrate.
 
-- **Standards body, regulator, or insurer** trying to figure out what "agentic AI accountability" means technically. Web4 is the open spec + published implementation + reproducible artifacts. AGPL-3.0 with patent grant ([PATENTS.md](PATENTS.md)), owned by no one. Start with [STATUS.md](STATUS.md) and the [whitepaper](whitepaper/).
+- **Standards body, regulator, or insurer** trying to figure out what "agentic AI accountability" means technically. Web4 is the open spec + published implementation + reproducible artifacts. AGPL-3.0 with patent grant ([PATENTS.md](PATENTS.md)), owned by no one. Start with [STATUS.md](STATUS.md) and the [whitepaper](whitepaper-web/).
 
 If you came here looking for a finished product to install and use, this isn't that. If you came here looking for the layer underneath the products you're building, it is.
 
@@ -282,7 +282,7 @@ Web4 contains **four development tracks** at different maturity levels:
 
 **What it is**: An interactive explainer site demonstrating how agents earn trust over time — lifecycle, witnessing, and trust evolution made browsable. Live at [4-life-ivory.vercel.app](https://4-life-ivory.vercel.app/).
 
-**Status**: **Standalone project** → [github.com/dp-web4/4-life](https://github.com/dp-web4/4-life)
+**Status**: **Standalone project** → [github.com/dp-web4/4-life](https://github.com/auraecosystem/dp-web4/4-life)
 
 The original prototype (`/game/`) was archived to `archive/game-prototype/` after evolving past the simulation stage. Active simulation research continues in `/simulations/` (attack scenarios, trust dynamics).
 
@@ -410,7 +410,7 @@ Operators: `[]` = "contains", `/` = "verified by", `*` = "contextualized by", `+
 
 **Fine-grained delegation** with enforcement:
 
-```qpy
+```q
 Example: Agent purchasing with constraints
 - Daily budget limits
 - Per-transaction limits
@@ -460,7 +460,7 @@ See [`demo/DEMO_SCRIPT.md`](demo/DEMO_SCRIPT.md) for walkthrough.
 
 ### Run Simulations
 
-```bash.xsim
+```.xlsim
 cd simulations
 
 # Attack simulations
@@ -550,7 +550,7 @@ This project is licensed under the **GNU Affero General Public License v3.0 (AGP
 
 This software implements technology covered by patents owned by MetaLINXX Inc. A royalty-free patent license is granted for non-commercial and research use under AGPL-3.0 terms.
 
-**For commercial licensing**: Contact Metalinxx Inc. via the [project repository](https://github.com/dp-web4/web4) or see [PATENTS.md](PATENTS.md).
+**For commercial licensing**: Contact Metalinxx Inc. via the [project repository](https://github.com/auraecosystem/dp-web4/web4) or see [PATENTS.md](PATENTS.md).
 
 See [PATENTS.md](PATENTS.md) for full patent details.
 
