@@ -174,6 +174,26 @@ The applications come when the substrate exists *and* the present-tense pain for
 - What's the minimal viable Web4 for a public pilot?
 
 ---
+```svg
+QUBUHUB
+      │
+      ▼
+ Web4 Gateway
+      │
+ ┌────┼─────┐
+ │    │     │
+Identity Trust Ledger
+ │    │     │
+ └────┼─────┘
+      │
+ AI Agents
+      │
+ Marketplace
+      │
+ Smart Contracts
+      │
+ Applications
+```
 
 ## 🎯 Vision
 
