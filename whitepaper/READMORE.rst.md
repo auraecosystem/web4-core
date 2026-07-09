@@ -4,7 +4,7 @@ This directory contains the modular, maintainable version of the Web4 whitepaper
 
 ## Structure
 
-```zid
+```bash.zsh
 whitepaper/
 ├── sections/           # Individual whitepaper sections
 │   ├── 00-metadata.md
