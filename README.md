@@ -9,7 +9,10 @@
 > **AI is already taking actions in the world. We can't prove what it did.**
 > Web4 is the open standard that closes that gap.
 
-An open standard for verifiable AI presence — proposed by Metalinxx Inc., owned by no one. Research-stage. v0.1.1 packages public; reference implementation public; no production deployment yet. **[STATUS.md](STATUS.md)** is the calibration — read it before judging the claims below.
+An open standard for verifiable AI presence 
+>> — proposed by Metalinxx Inc.,
+>> owned by no one.
+>> Research-stage. v0.1.1 packages public; reference implementation public; no production deployment yet. **[STATUS.md](STATUS.md)** is the calibration — read it before judging the claims below.
 
 **Proof point**: 0% → 94.85% on ARC-AGI-3 with the same Claude Opus 4.6, structured around Web4 patterns via the [SAGE](https://github.com/dp-web4/SAGE) harness. [Public scorecard](https://arcprize.org/scorecards/c7dfb4f1-8642-4c9e-ab4d-152f5f8e33b4). The model didn't change — the structure around it did.
 
