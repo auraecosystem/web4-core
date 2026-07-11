@@ -50,7 +50,7 @@ If you want a fast read on whether this is real, in order:
 7. [**web4-standard/core-spec/inter-society-protocol.md**](web4-standard/core-spec/inter-society-protocol.md) — society genesis (self-bootstrapped + federation-based), first-contact (3 sovereign options), ATP reification sovereignty, secession.
 8. [**web4-standard/core-spec/society-roles.md**](web4-standard/core-spec/society-roles.md) — 7 base-mandatory roles + context-mandatory (forced by outward role) + optional, with fractal composability and audit implications.
 9. [**forum/kimi2_6_review.md**](forum/kimi2_6_review.md) — independent cross-model review (Kimi 2.6) with three rounds of dialogue. External scrutiny on the work, raw and verbatim.
-
+![arc](https://arcprize.org/scorecards/c7dfb4f1-8642-4c9e-ab4d-152f5f8e33b4)
 ---
 
 ## Install
@@ -58,7 +58,7 @@ If you want a fast read on whether this is real, in order:
 **Rust** (`Cargo.toml`):
 ```toml
 [dependencies]
-web4-core = "0.1"
+web4-core = "0.3"
 web4-trust-core = "0.1"
 ```
 
