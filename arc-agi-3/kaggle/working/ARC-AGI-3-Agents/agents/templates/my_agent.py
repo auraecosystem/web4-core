@@ -1,0 +1,59 @@
+import os
+
+if os.getenv('KAGGLE_IS_COMPETITION_RERUN'):
+    # Wait for gateway to be ready
+    !curl --fail --retry 999 --retry-all-errors --retry-delay 5 \
+          --retry-max-time 600 http://gateway:8001/api/games
+
+    # Copy repo to writable location
+    !cp -r /kaggle/input/competitions/arc-prize-2026-arc-agi-3/ARC-AGI-3-Agents \
+           /kaggle/working/ARC-AGI-3-Agents
+
+    # Copy custom agent
+    !cp /kaggle/working/my_agent.py \
+        /kaggle/working/ARC-AGI-3-Agents/agents/templates/my_agent.py
+
+    # Write a minimal __init__.py that only imports what we need
+    # (the original eagerly imports templates with unmet deps like langgraph, smolagents)
+    with open('/kaggle/working/ARC-AGI-3-Agents/agents/__init__.py', 'w') as f:
+        f.write("""from typing import Type, cast
+from dotenv import load_dotenv
+from .agent import Agent, Playback
+from .swarm import Swarm
+from .templates.random_agent import Random
+from .templates.my_agent import MyAgent
+
+load_dotenv()
+
+AVAILABLE_AGENTS: dict[str, Type[Agent]] = {
+    "random": Random,
+    "myagent": MyAgent,
+}
+""")
+
+    # Write a .env file that overrides .env.example defaults
+    # This is loaded second with override=True by main.py, so it wins
+    with open('/kaggle/working/ARC-AGI-3-Agents/.env', 'w') as f:
+        f.write("""SCHEME=http
+HOST=gateway
+PORT=8001
+ARC_API_KEY=test-key-123
+ARC_BASE_URL=http://gateway:8001/
+OPERATION_MODE=online
+ENVIRONMENTS_DIR=
+RECORDINGS_DIR=/kaggle/working/server_recording
+""")
+
+    # Run agent
+    !cd /kaggle/working/ARC-AGI-3-Agents && \
+        MPLBACKEND=agg \
+        python main.py --agent myagent
+linkcode
+# Non-rerun mode: produce a dummy submission
+import pandas as pd
+
+if not os.getenv('KAGGLE_IS_COMPETITION_RERUN'):
+    submission = pd.DataFrame(
+        data=[['1_0', '1', True, 1]],
+        columns=['row_id', 'game_id', 'end_of_game', 'score'])
+    submission.to_parquet('/kaggle/working/submission.parquet', index=False)
