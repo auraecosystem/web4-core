@@ -8,4 +8,8 @@ python app.py
 cd demo/delegation-ui
 pip install -r requirements.txt
 python app.py
-# Visit: http://localhost:8001
+# Visit: http://localhost:8000
+# To view the text narrative files created by the script:
+cat public/narratives/adversarial_summary.json
+# or check the local markdown files
+cat docs/NARRATIVE_SYSTEM.md
