@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@web4/*": ["auraecosystem/ai-workspace/web4/src/*"],
+      "@components/*": ["auraecosystem/ai-workspace/web4/components/*"]
+    }
+  }
+}
