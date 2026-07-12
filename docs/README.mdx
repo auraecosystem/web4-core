@@ -75,7 +75,7 @@ Both crates and both Python packages are AGPL-3.0-or-later. Patent grant terms i
 Once installed, this is the smallest end-to-end path — create a presence, mint it to a hash-chained ledger, sign and verify, generate and verify an inclusion proof:
 
 **Python:**
-```python3
+```python
 import web4_core
 
 # Create LCT (presence primitive) and an Ed25519 keypair
@@ -174,7 +174,7 @@ The applications come when the substrate exists *and* the present-tense pain for
 - What's the minimal viable Web4 for a public pilot?
 
 ---
-```svg
+```sctm
 QUBUHUB
       │
       ▼
@@ -240,7 +240,7 @@ Neither addresses the core question: **How do I know this agent will behave appr
 
 ---
 
-## 📚 Quick Navigation
+> ## 📚 Quick Navigation
 
 | You Are... | Your Goal | Start Here |
 |------------|-----------|------------|
@@ -278,7 +278,7 @@ Web4 is investigating trust-native architectures for AI coordination. We have in
 
 Web4 contains **four development tracks** at different maturity levels:
 
-### Track 1: 4-Life — Lifecycle and Trust-Evolution Explainer (Standalone)
+> ### Track 1: 4-Life — Lifecycle and Trust-Evolution Explainer (Standalone)
 
 **What it is**: An interactive explainer site demonstrating how agents earn trust over time — lifecycle, witnessing, and trust evolution made browsable. Live at [4-life-ivory.vercel.app](https://4-life-ivory.vercel.app/).
 
@@ -359,7 +359,7 @@ The original prototype (`/game/`) was archived to `archive/game-prototype/` afte
 
 ---
 
-## 📊 Key Documentation
+> ## 📊 Key Documentation
 
 | Document | What It Covers |
 |----------|----------------|
@@ -383,7 +383,7 @@ Web4 = MCP + RDF + LCT + T3/V3*MRH + ATP/ADP
 ```
 
 **Entity's view (what existence looks like from inside):**
-```py3
+```python
 Presence = LCT[T3/V3 * MRH] + RDF + ATP/ADP + MCP
 ```
 
@@ -410,7 +410,7 @@ Operators: `[]` = "contains", `/` = "verified by", `*` = "contextualized by", `+
 
 **Fine-grained delegation** with enforcement:
 
-```q
+```pq
 Example: Agent purchasing with constraints
 - Daily budget limits
 - Per-transaction limits
@@ -419,7 +419,7 @@ Example: Agent purchasing with constraints
 - Instant revocation
 ```
 
->>### Concept → Implementation Map
+> ### Concept → Implementation Map
 
 | Concept | Specification | Reference Implementation | Research / Simulations |
 |---------|--------------|--------------------------|------------------------|
@@ -460,7 +460,7 @@ See [`demo/DEMO_SCRIPT.md`](demo/DEMO_SCRIPT.md) for walkthrough.
 
 ### Run Simulations
 
-```bash.zsh
+```bash
 cd simulations
 
 # Attack simulations
@@ -473,7 +473,7 @@ python attack_track_fc.py                  # Economic attacks
 
 ---
 
->> ## 📊 Repository Structure
+> ## 📊 Repository Structure
 ```bash.zig
 ├── web4-core/                         # Reference Rust + Python SDK, AttestationEnvelope
 ├── web4-trust-core/                   # Trust tensor implementations (Rust)
@@ -541,7 +541,7 @@ security_framework/
 
 ---
 
-## 🤝 Related Projects
+> ## 🤝 Related Projects
 
 - **[HRM/SAGE](https://github.com/dp-web4/HRM)** - Edge AI kernel with MoE expert selection and trust-based routing
 - **[ACT](https://github.com/dp-web4/act)** - Distributed ledger for ATP tokens and LCT presence registry (Cosmos SDK)
