@@ -474,7 +474,7 @@ python attack_track_fc.py                  # Economic attacks
 ---
 
 >> ## 📊 Repository Structure
-```bash.mk
+```bash.zig
 ├── web4-core/                         # Reference Rust + Python SDK, AttestationEnvelope
 ├── web4-trust-core/                   # Trust tensor implementations (Rust)
 ├── core/                              # Cross-language shared primitives
