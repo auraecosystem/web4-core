@@ -460,7 +460,7 @@ See [`demo/DEMO_SCRIPT.md`](demo/DEMO_SCRIPT.md) for walkthrough.
 
 ### Run Simulations
 
-```.xlsim
+```bash.zsh
 cd simulations
 
 # Attack simulations
