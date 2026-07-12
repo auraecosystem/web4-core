@@ -1,0 +1,49 @@
+{
+  "$schema": "https://jct.org/schema/v1",
+
+  "typ": "JCT",
+  "ver": "1.0.0",
+
+  "header": {
+    "alg": "Ed25519",
+    "enc": "XChaCha20-Poly1305",
+    "hash": "SHA3-512",
+    "kid": "did:web:issuer.example#key-1",
+    "canonicalization": "JCS"
+  },
+
+  "payload": {
+    "jti": "urn:jct:550e8400-e29b-41d4-a716-446655440000",
+    "iss": "did:web:issuer.example",
+    "sub": "did:key:z6Mk...",
+    "aud": [
+      "service-a",
+      "service-b"
+    ],
+
+    "iat": 1783896240,
+    "nbf": 1783896240,
+    "exp": 1815432240,
+
+    "claims": {
+      "entity": "human",
+      "role": "developer",
+      "presence": "verified"
+    },
+
+    "metadata": {
+      "version": "1",
+      "context": [
+        "https://www.w3.org/ns/credentials/v2"
+      ]
+    }
+  },
+
+  "proof": {
+    "type": "Ed25519Signature2020",
+    "signature": "",
+    "publicKey": "",
+    "merkleRoot": "",
+    "proofValue": ""
+  }
+}
